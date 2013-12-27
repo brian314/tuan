@@ -90,7 +90,7 @@ $(function(){
 				<a class="logo" href="http://j-ui.com">标志</a>
 				<ul class="nav">
 				    <li>
-				         <a href='#'><s:property value="#session.admin.name"/>，欢迎回来（<s:property value="#session.admin.deptName"/>）</a>
+				         <a href='#'><s:property value="#session.admin.name"/>，欢迎回来</a>
                     </li> 
 					<li><a href="<%=path%>/system/logout.do">退出</a></li>
 				</ul>
@@ -111,13 +111,27 @@ $(function(){
 				
 				<div class="accordion" fillSpace="sidebar">
 					<div class="accordionHeader">
-						<h2><span>Folder</span>调查管理</h2>
+						<h2><span>Folder</span>运营管理</h2>
 					</div>
 					<div class="accordionContent">
 						<ul class="tree treeFolder">
-							<li><a href="javascript:void(0);">用户调查管理</a>
+							<li><a href="javascript:void(0);">商品管理</a>
 								<ul>
-									<li><a href="/system/research.do" target="navTab" rel="research">我的调查列表</a></li>
+									<li><a href="/system/product.do" target="navTab" rel="product">商品列表</a></li>
+									<li><a href="/system/activity.do" target="navTab" rel="activity">活动商品列表</a></li>
+									<li><a href="/system/productType.do" target="navTab" rel="productType">商品分类列表</a></li>
+									<li><a href="/system/productBrand.do" target="navTab" rel="productBran">商品品牌列表</a></li>
+								</ul>
+							</li>
+							<li><a href="javascript:void(0);">用户管理</a>
+								<ul>
+									<li><a href="/system/member.do" target="navTab" rel="member">用户列表</a></li>
+								</ul>
+							</li>
+							<li><a href="javascript:void(0);">支付管理</a>
+								<ul>
+								    <li><a href="/system/trade.do" target="navTab" rel="trade">支付订单管理</a></li>
+									<li><a href="/system/channelType.do" target="navTab" rel="channelType">支付渠道管理</a></li>
 								</ul>
 							</li>
 							<li><a href="javascript:void(0);">修改登录密码</a>
@@ -125,20 +139,6 @@ $(function(){
 								    <li><a href="password.jsp" target="navTab" rel="password">修改登录密码</a></li>
 								</ul>
 							</li>
-							<s:if test="#attr.admin.adminType==1">
-							<li><a href="javascript:void(0);">调查项目管理</a>
-								<ul>
-								    <li><a href="/system/topic.do" target="navTab" rel="topic">调查项目管理</a></li>
-								    <li><a href="/system/question.do" target="navTab" rel="question">调查题目管理</a></li>
-								</ul>
-							</li>
-							<li><a href="javascript:void(0);">调查统计管理</a>
-								<ul>
-								    <li><a href="answer.do" target="navTab" rel="answer">答案列表</a></li>
-								    <li><a href="answer!stat.do" target="navTab" rel="stat">统计列表</a></li>
-								</ul>
-							</li>
-							</s:if>
 						</ul>
 					</div>
 					<div class="accordionHeader">
