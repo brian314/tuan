@@ -1,4 +1,4 @@
-package com.tuan.action.system;
+package com.tuan.action;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

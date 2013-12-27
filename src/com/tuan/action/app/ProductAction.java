@@ -1,5 +1,7 @@
 package com.tuan.action.app;
 
-public class ProductAction {
+import com.tuan.action.system.BaseAction;
+
+public class ProductAction extends BaseAction{
 
 }
