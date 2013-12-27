@@ -4,5 +4,6 @@
 <configuration>
     <mappers>
         <mapper resource="com/tuan/mapper/AdminMapper.xml"/>
+        <mapper resource="com/tuan/mapper/ProductTypeMapper.xml"/>
     </mappers>
 </configuration>

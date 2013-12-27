@@ -5,6 +5,7 @@ import java.text.MessageFormat;
 import org.apache.commons.lang.xwork.StringUtils;
 import org.apache.log4j.Logger;
 
+import com.tuan.action.BaseAction;
 import com.tuan.entity.Admin;
 import com.tuan.manager.AdminManager;
 import com.tuan.utils.Constants;

@@ -25,23 +25,26 @@
       <action name="index">
          <result name="success" type="redirect">index.jsp</result>
       </action>
-      <action name="login" class="com.tuan.action.LoginAction" method="doLogin">
+      <action name="login" class="com.tuan.action.system.LoginAction" method="doLogin">
          <result name="success" type="redirect">/system/index.jsp</result>
          <result name="login">/index.jsp</result>
          <result name="input">/index.jsp</result>
       </action>
-      <action name="logout" class="com.tuan.action.LogoutAction" method="doLogout">
+      <action name="logout" class="com.tuan.action.system.LogoutAction" method="doLogout">
          <result name="success" type="redirect">/index.jsp</result>
       </action>   
     </package>
     
 	<package name="system" namespace="/system" extends="default">
-        <action name="index" class="com.tuan.action.IndexAction">
+        <action name="index" class="com.tuan.action.system.IndexAction">
              <result name="success">index.jsp</result>
              <result name="JSON" type="json"></result>
         </action>
-        <action name="password" class="com.tuan.action.PasswordAction">
+        <action name="password" class="com.tuan.action.system.PasswordAction">
              <result name="success">/system/index.jsp</result>
+        </action>
+        <action name="productType" class="com.tuan.action.system.ProductTypeAction">
+             <result name="success" type="freemarker">/system/product_type/index.ftl</result>
         </action>
     </package>
 
