@@ -1,4 +1,4 @@
-package com.tuan.action;
+package com.tuan.action.system;
 
 import org.apache.log4j.Logger;
 
