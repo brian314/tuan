@@ -7,14 +7,14 @@
         <if test="endDate != null and endDate != ''">and updateDatetime&lt;DATE_ADD(str_to_date(#{endDate},'%Y-%m-%d'),INTERVAL 1 day)</if>
     </select>
     <insert id="save"  useGeneratedKeys="true" keyProperty="id" keyColumn="GENERATED_KEY">
-      INSERT INTO product_type(name,fatherId,fatherPath,orderPath,sort,createDatetime,updateDatetime) 
-      VALUES(#{name},#{fatherId},#{fatherPath},#{orderPath},#{sort},now(),now())
+      INSERT INTO product_type(name,fatherId,fatherPath,orderPath,sort,status,createDatetime,updateDatetime) 
+      VALUES(#{name},#{fatherId},#{fatherPath},#{orderPath},#{sort},#{status},now(),now())
     </insert>
     <select id="getEntity" parameterType="com.tuan.entity.ProductType" resultType="com.tuan.entity.ProductType">
       SELECT * FROM product_type WHERE 1=1
       <if test="startDate != null and startDate != ''">and updateDatetime>=str_to_date(#{startDate},'%Y-%m-%d')</if>
       <if test="endDate != null and endDate != ''">and updateDatetime&lt;DATE_ADD(str_to_date(#{endDate},'%Y-%m-%d'),INTERVAL 1 day)</if>
-      order by createDatetime desc
+      order by orderPath
       <if test="pageNum != null">LIMIT ${(pageNum-1)*numPerPage},${numPerPage}</if>
     </select>
     <select id="getEntityById" parameterType="String" resultType="com.tuan.entity.ProductType">
@@ -27,6 +27,6 @@
       </foreach>  
     </delete>
     <update id="update" parameterType="com.tuan.entity.ProductType">
-      UPDATE product_type SET name=#{name},fatherId=#{fatherId},fatherPath=#{fatherPath},orderPath=#{orderPath},sort=#{sort},updateDatetime=now()} WHERE id=#{id}
+      UPDATE product_type SET name=#{name},fatherId=#{fatherId},fatherPath=#{fatherPath},orderPath=#{orderPath},sort=#{sort},status=#{status},updateDatetime=now() WHERE id=#{id}
     </update>
 </mapper>

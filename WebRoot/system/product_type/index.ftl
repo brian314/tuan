@@ -25,10 +25,10 @@
 <div class="pageContent">
 <div class="panelBar">
 		<ul class="toolBar">
-			<li><a class="add" href="/system/productType!add.do" target="navTab"><span>添加问题</span></a></li>
+			<li><a class="add" href="/system/productType!add.do" target="navTab"><span>添加分类</span></a></li>
 			<li><a class="delete" href="/system/productType!delete.do?ids={sid}" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
 			<li><a class="delete" href="/system/productType!delete.do" rel="ids" target="selectedTodo" title="确实要删除这些记录吗?"><span>批量删除</span></a></li>
-			<li><a class="edit" href="/system/productType!edit.do?id={sid}" target="navTab"><span>编辑问题</span></a></li>
+			<li><a class="edit" href="/system/productType!edit.do?id={sid}" target="navTab"><span>编辑分类</span></a></li>
 			<li class="line">line</li>
 			<li><a class="icon" href="#" target="dwzExport" targetType="navTab" title="实要导出这些记录吗?"><span>导出EXCEL</span></a></li>
 		</ul>
@@ -39,10 +39,11 @@
 			    <th><input type="checkbox" class="checkboxCtrl" group="ids"/></th>
 				<th style="text-align:center;">分类ID</th>
 				<th style="text-align:center;">分类名称</th>
-				<th style="text-align:center;">父类ID</th>
+				<th style="text-align:center;">父类名称</th>
 				<th style="text-align:center;">父类路径</th>
 				<th style="text-align:center;">排序路径</th>
-				<th style="text-align:center;">序号</th>
+				<th style="text-align:center;">排序索引</th>
+				<th style="text-align:center;">状态</th>
 				<th style="text-align:center;">操作</th>
 			</tr>
 		</thead>
@@ -53,12 +54,19 @@
 					    <td><input type="checkbox" name="ids" value="${rs.id}"/></td>
 						<td>${rs.id}</td>
 						<td>${rs.name}</td>
-						<td>${rs.fatherId}</td>
+						<td>${rs.fatherName}</td>
 						<td>${rs.fatherPath}</td>
 					    <td>${rs.orderPath}</td>
 					    <td>${rs.sort}</td>
 					    <td>
-					       <a title="编辑" target="navTab" href="/system/productType!edit.do?id=${rs.id}" class="btnEdit">编辑</a>
+						     <#if rs.status == 1>
+							      <div style='color:green;'>有效</div>
+							 <#elseif rs.status == 0>
+							      <div style='color:red;'>无效</div>
+							 </#if>
+					    </td>
+					    <td>
+					       <a title="编辑分类" target="navTab" href="/system/productType!edit.do?id=${rs.id}" class="btnEdit">编辑</a>
 					       <a title="确认删除此记录？" target="ajaxTodo" href="/system/productType!delete.do?ids=${rs.id}" class="btnDel">删除</a>
 					    </td>
 					</tr>

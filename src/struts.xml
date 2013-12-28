@@ -45,6 +45,8 @@
         </action>
         <action name="productType" class="com.tuan.action.system.ProductTypeAction">
              <result name="success" type="freemarker">/system/product_type/index.ftl</result>
+             <result name="add" type="freemarker">/system/product_type/add.ftl</result>
+             <result name="edit" type="freemarker">/system/product_type/edit.ftl</result>
         </action>
     </package>
 

@@ -5,10 +5,11 @@ import java.util.Date;
 public class ProductType {
     private Long    id;
     private String  name;
-    private String  fatherId;
-    private Integer fatherPath;
-    private Integer orderPath;
+    private Long    fatherId;
+    private String  fatherPath;
+    private String  orderPath;
     private Integer sort;
+    private Integer status;
     private Date    createDatetime;
     private Date    updateDatetime;
     
@@ -17,6 +18,8 @@ public class ProductType {
     private Integer numPerPage;
 	private String startDate;
 	private String endDate; 
+	
+	private String fatherName;
     
     public ProductType(){
     	
@@ -38,27 +41,27 @@ public class ProductType {
 		this.name = name;
 	}
 
-	public String getFatherId() {
+	public Long getFatherId() {
 		return fatherId;
 	}
 
-	public void setFatherId(String fatherId) {
+	public void setFatherId(Long fatherId) {
 		this.fatherId = fatherId;
 	}
 
-	public Integer getFatherPath() {
+	public String getFatherPath() {
 		return fatherPath;
 	}
 
-	public void setFatherPath(Integer fatherPath) {
+	public void setFatherPath(String fatherPath) {
 		this.fatherPath = fatherPath;
 	}
 
-	public Integer getOrderPath() {
+	public String getOrderPath() {
 		return orderPath;
 	}
 
-	public void setOrderPath(Integer orderPath) {
+	public void setOrderPath(String orderPath) {
 		this.orderPath = orderPath;
 	}
 
@@ -68,6 +71,14 @@ public class ProductType {
 
 	public void setSort(Integer sort) {
 		this.sort = sort;
+	}
+
+	public Integer getStatus() {
+		return status;
+	}
+
+	public void setStatus(Integer status) {
+		this.status = status;
 	}
 
 	public Date getCreateDatetime() {
@@ -117,6 +128,16 @@ public class ProductType {
 	public void setEndDate(String endDate) {
 		this.endDate = endDate;
 	}
+
+	public String getFatherName() {
+		return fatherName;
+	}
+
+	public void setFatherName(String fatherName) {
+		this.fatherName = fatherName;
+	}
+
+	
     
     
   
