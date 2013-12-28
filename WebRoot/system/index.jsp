@@ -131,7 +131,7 @@ $(function(){
 							<li><a href="javascript:void(0);">支付管理</a>
 								<ul>
 								    <li><a href="/system/trade.do" target="navTab" rel="trade">支付订单管理</a></li>
-									<li><a href="/system/channelType.do" target="navTab" rel="channelType">支付渠道管理</a></li>
+									<li><a href="/system/tradeChannel.do" target="navTab" rel="tradeChannel">支付渠道管理</a></li>
 								</ul>
 							</li>
 							<li><a href="javascript:void(0);">修改登录密码</a>

@@ -1,17 +1,21 @@
 
 <div class="pageContent">
-	<form method="post" action="/system/topic!save.do" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone);">
+	<form method="post" action="/system/productBrand!save.do" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone);">
 		<div class="pageFormContent" layoutH="56">
-		    <dl class="nowrap">
-				<dt>调查项目名称：</dt>
-				<dd><input name="topic.title" class="required" type="text" size="100"/></dd>
+			<dl class="nowrap">
+				<dt>品牌名称：</dt>
+				<dd><input name="productBrand.name" class="required" type="text" size="50"/></dd>
+			</dl>
+			<dl class="nowrap">
+				<dt>排序索引：</dt>
+				<dd><input name="productBrand.sort" class="required" type="text" size="50" max="99" min="0"/></dd>
 			</dl>
 			<dl class="nowrap">
 				<dt>状态：</dt>
 				<dd>
-				  <select name="topic.status" class="required combox" showvalue="1">
+				  <select name="productBrand.status" class="required combox" showvalue="1">
 					  <option value="1">有效</option>
-					  <option value="-1">无效</option>
+					  <option value="0">无效</option>
 				  </select>
 				</dd>
 			</dl>
