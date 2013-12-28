@@ -26,8 +26,8 @@
 				<dt>状态：</dt>
 				<dd>
 				  <select name="productType.status" class="required combox" showvalue="1">
-					  <option value="1" <#if productTypeList.status==1>selected="selected"</#if>>有效</option>
-					  <option value="0" <#if productTypeList.status==-1>selected="selected"</#if>>无效</option>
+					  <option value="1">有效</option>
+					  <option value="0">无效</option>
 				  </select>
 				</dd>
 			</dl>

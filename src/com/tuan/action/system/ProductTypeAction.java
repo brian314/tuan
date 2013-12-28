@@ -59,8 +59,8 @@ public class ProductTypeAction extends BaseAction {
 		//查询所有分类,给combox用
 		ProductType params = new ProductType();
 		params.setStatus(1);
-		List<ProductType> topicList = productTypeManager.getEntity(params);
-		getRequest().setAttribute("productTypeList",topicList);
+		List<ProductType> productTypeList = productTypeManager.getEntity(params);
+		getRequest().setAttribute("productTypeList",productTypeList);
 		return "add";
 	}
 
@@ -74,8 +74,8 @@ public class ProductTypeAction extends BaseAction {
 		//查询所有项目,给combox用
 		ProductType params = new ProductType();
 		params.setStatus(1);
-		List<ProductType> topicList = productTypeManager.getEntity(params);
-		getRequest().setAttribute("productTypeList",topicList);
+		List<ProductType> productTypeList = productTypeManager.getEntity(params);
+		getRequest().setAttribute("productTypeList",productTypeList);
 		
 		return "edit";
 	}

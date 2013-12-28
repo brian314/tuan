@@ -51,10 +51,11 @@
     <!--dao层 -->
     <bean id="adminDao" class="com.tuan.dao.impl.AdminDaoImpl"></bean>
     <bean id="productTypeDao" class="com.tuan.dao.impl.ProductTypeDaoImpl"></bean>
+    <bean id="productBrandDao" class="com.tuan.dao.impl.ProductBrandDaoImpl"></bean>
     <!-- service层 -->
     <bean id="adminManager" class="com.tuan.manager.impl.AdminManagerImpl"></bean>
     <bean id="productTypeManager" class="com.tuan.manager.impl.ProductTypeManagerImpl"></bean>
-     
+    <bean id="productBrandManager" class="com.tuan.manager.impl.ProductBrandManagerImpl"></bean> 
 </beans>
 
 

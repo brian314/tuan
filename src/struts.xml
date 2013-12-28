@@ -48,6 +48,11 @@
              <result name="add" type="freemarker">/system/product_type/add.ftl</result>
              <result name="edit" type="freemarker">/system/product_type/edit.ftl</result>
         </action>
+        <action name="productBrand" class="com.tuan.action.system.ProductBrandAction">
+             <result name="success" type="freemarker">/system/product_brand/index.ftl</result>
+             <result name="add" type="freemarker">/system/product_brand/add.ftl</result>
+             <result name="edit" type="freemarker">/system/product_brand/edit.ftl</result>
+        </action>
     </package>
 
 </struts>

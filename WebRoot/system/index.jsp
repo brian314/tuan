@@ -120,7 +120,7 @@ $(function(){
 									<li><a href="/system/product.do" target="navTab" rel="product">商品列表</a></li>
 									<li><a href="/system/activity.do" target="navTab" rel="activity">活动商品列表</a></li>
 									<li><a href="/system/productType.do" target="navTab" rel="productType">商品分类列表</a></li>
-									<li><a href="/system/productBrand.do" target="navTab" rel="productBran">商品品牌列表</a></li>
+									<li><a href="/system/productBrand.do" target="navTab" rel="productBrand">商品品牌列表</a></li>
 								</ul>
 							</li>
 							<li><a href="javascript:void(0);">用户管理</a>
