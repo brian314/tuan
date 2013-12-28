@@ -1,14 +1,43 @@
 
 <div class="pageContent">
-	<form method="post" action="/system/productBrand!save.do" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone);">
+	<form method="post" action="/system/tradeChannel!save.do" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone);">
 		<div class="pageFormContent" layoutH="56">
 			<dl class="nowrap">
-				<dt>品牌名称：</dt>
-				<dd><input name="productBrand.name" class="required" type="text" size="50"/></dd>
+				<dt>支付渠道名称：</dt>
+				<dd><input name="tradeChannel.name" class="required" type="text" size="50"/></dd>
 			</dl>
 			<dl class="nowrap">
-				<dt>排序索引：</dt>
-				<dd><input name="productBrand.sort" class="required" type="text" size="50" max="99" min="0"/></dd>
+				<dt>合作商ID：</dt>
+				<dd><input name="tradeChannel.partnerId" class="required" type="text" size="50"/></dd>
+			</dl>
+			<dl class="nowrap">
+				<dt>合作商帐号：</dt>
+				<dd><input name="tradeChannel.account" class="required" type="text" size="50"/></dd>
+			</dl>
+			<dl class="nowrap">
+				<dt>RSA密钥：</dt>
+				<dd><input name="tradeChannel.privateKey" type="text" size="100"/></dd>
+			</dl>
+			<dl class="nowrap">
+				<dt>RSA公钥：</dt>
+				<dd><input name="tradeChannel.publicKey" type="text" size="100"/></dd>
+			</dl>
+			<dl class="nowrap">
+				<dt>渠道RSA公钥：</dt>
+				<dd><input name="tradeChannel.channelPublicKey" type="text" size="100"/></dd>
+			</dl>
+			<dl class="nowrap">
+				<dt>MD5密钥：</dt>
+				<dd><input name="tradeChannel.secretKey" type="text" size="100"/></dd>
+			</dl>
+			<dl class="nowrap">
+				<dt>加密类型：</dt>
+				<dd>
+				  <select name="tradeChannel.encryptType" class="required combox" showvalue="1">
+					  <option value="1">RSA</option>
+					  <option value="2">MD5</option>
+				  </select>
+				</dd>
 			</dl>
 			<dl class="nowrap">
 				<dt>状态：</dt>

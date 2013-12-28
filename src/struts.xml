@@ -53,6 +53,11 @@
              <result name="add" type="freemarker">/system/product_brand/add.ftl</result>
              <result name="edit" type="freemarker">/system/product_brand/edit.ftl</result>
         </action>
+        <action name="tradeChannel" class="com.tuan.action.system.TradeChannelAction">
+             <result name="success" type="freemarker">/system/trade_channel/index.ftl</result>
+             <result name="add" type="freemarker">/system/trade_channel/add.ftl</result>
+             <result name="edit" type="freemarker">/system/trade_channel/edit.ftl</result>
+        </action>
     </package>
 
 </struts>

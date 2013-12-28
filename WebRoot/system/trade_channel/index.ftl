@@ -25,10 +25,10 @@
 <div class="pageContent">
 <div class="panelBar">
 		<ul class="toolBar">
-			<li><a class="add" href="/system/tradeChannel!add.do" target="navTab"><span>添加品牌</span></a></li>
+			<li><a class="add" href="/system/tradeChannel!add.do" target="navTab"><span>添加支付渠道</span></a></li>
 			<li><a class="delete" href="/system/tradeChannel!delete.do?ids={sid}" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
 			<li><a class="delete" href="/system/tradeChannel!delete.do" rel="ids" target="selectedTodo" title="确实要删除这些记录吗?"><span>批量删除</span></a></li>
-			<li><a class="edit" href="/system/tradeChannel!edit.do?id={sid}" target="navTab"><span>编辑品牌</span></a></li>
+			<li><a class="edit" href="/system/tradeChannel!edit.do?id={sid}" target="navTab"><span>编辑支付渠道</span></a></li>
 			<li class="line">line</li>
 			<li><a class="icon" href="#" target="dwzExport" targetType="navTab" title="实要导出这些记录吗?"><span>导出EXCEL</span></a></li>
 		</ul>
@@ -37,9 +37,11 @@
 		<thead>
 			<tr>
 			    <th><input type="checkbox" class="checkboxCtrl" group="ids"/></th>
-				<th style="text-align:center;">品牌ID</th>
-				<th style="text-align:center;">品牌名称</th>
-				<th style="text-align:center;">排序索引</th>
+				<th style="text-align:center;">支付渠道ID</th>
+				<th style="text-align:center;">支付渠道名称</th>
+				<th style="text-align:center;">合作商户ID</th>
+				<th style="text-align:center;">帐号</th>
+				<th style="text-align:center;">加密方式</th>
 				<th style="text-align:center;">状态</th>
 				<th style="text-align:center;">操作</th>
 			</tr>
@@ -51,7 +53,15 @@
 					    <td><input type="checkbox" name="ids" value="${rs.id}"/></td>
 						<td>${rs.id}</td>
 						<td>${rs.name}</td>
-					    <td>${rs.sort}</td>
+					    <td>${rs.partnerId}</td>
+					    <td>${rs.account}</td>
+					    <td>
+					       <#if rs.encryptType == 1>
+							      RSA
+						   <#elseif rs.encryptType == 2>
+							      MD5
+						   </#if>
+					    </td>
 					    <td>
 						     <#if rs.status == 1>
 							      <div style='color:green;'>有效</div>
@@ -60,7 +70,7 @@
 							 </#if>
 					    </td>
 					    <td>
-					       <a title="编辑品牌" target="navTab" href="/system/tradeChannel!edit.do?id=${rs.id}" class="btnEdit">编辑</a>
+					       <a title="编辑支付渠道" target="navTab" href="/system/tradeChannel!edit.do?id=${rs.id}" class="btnEdit">编辑</a>
 					       <a title="确认删除此记录？" target="ajaxTodo" href="/system/tradeChannel!delete.do?ids=${rs.id}" class="btnDel">删除</a>
 					    </td>
 					</tr>

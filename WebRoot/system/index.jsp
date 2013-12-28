@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=7" />
-<title>万人团管理平台</title>
+<title>百乐团购管理平台</title>
 
 <link href="<%=path%>/dwz/themes/default/style.css" rel="stylesheet" type="text/css" media="screen"/>
 <link href="<%=path%>/dwz/themes/css/core.css" rel="stylesheet" type="text/css" media="screen"/>
@@ -142,7 +142,7 @@ $(function(){
 						</ul>
 					</div>
 					<div class="accordionHeader">
-						<h2><span>Folder</span>XXXX管理</h2>
+						<h2><span>Folder</span>统计管理</h2>
 					</div>
 					<div class="accordionContent">
 						<ul class="tree treeFolder">

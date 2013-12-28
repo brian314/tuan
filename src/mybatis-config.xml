@@ -6,5 +6,6 @@
         <mapper resource="com/tuan/mapper/AdminMapper.xml"/>
         <mapper resource="com/tuan/mapper/ProductTypeMapper.xml"/>
         <mapper resource="com/tuan/mapper/ProductBrandMapper.xml"/>
+        <mapper resource="com/tuan/mapper/TradeChannelMapper.xml"/>
     </mappers>
 </configuration>
